@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="QuizQuestion" load_steps=2 format=3 uid="uid://78kx3v44nt4t"]
+
+[ext_resource type="Script" uid="uid://cfw8rgk40bl27" path="res://resources/questions/quiz_questions.gd" id="1_504xd"]
+
+[resource]
+script = ExtResource("1_504xd")
+question = "Dari 10 soal ujian, Ningning hanya perlu menjawab 7 soal. Jika soal nomor 1 dan 2 wajib dijawab, berapa banyak cara memilih soal yang akan dikerjakan Ningning?"
+options = Array[String](["28", "35", "56", "70"])
+timer = 30
+correct_answer = "C"
+metadata/_custom_type_script = "uid://cfw8rgk40bl27"

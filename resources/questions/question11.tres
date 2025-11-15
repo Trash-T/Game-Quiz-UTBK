@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="QuizQuestion" load_steps=2 format=3 uid="uid://b2aor460bwhcf"]
+
+[ext_resource type="Script" uid="uid://cfw8rgk40bl27" path="res://resources/questions/quiz_questions.gd" id="1_g1ji1"]
+
+[resource]
+script = ExtResource("1_g1ji1")
+question = "Kalimat berikut yang merupakan pernyataan logika adalah ..."
+options = Array[String](["\"Apakah kamu sudah makan?\"", "\"Besok pagi matahari akan terbit dari timur.\"", "\"Pergilah ke pasar sekarang!\"", "\"Wah, indah sekali pemandangan ini.\""])
+timer = 30
+correct_answer = "B"
+metadata/_custom_type_script = "uid://cfw8rgk40bl27"

@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="QuizQuestion" load_steps=2 format=3 uid="uid://ikn8iwkj5uam"]
+
+[ext_resource type="Script" uid="uid://cfw8rgk40bl27" path="res://resources/questions/quiz_questions.gd" id="1_q3hgx"]
+
+[resource]
+script = ExtResource("1_q3hgx")
+question = "Tentukan bentuk ekuivalen dari: \"Aku belajar jika dan hanya jika aku lulus.\""
+options = Array[String](["Jika aku belajar, maka aku lulus.", "Jika aku lulus, maka aku belajar.", "Aku belajar jika aku lulus.", "(a) dan (b) benar."])
+timer = 30
+correct_answer = "D"
+metadata/_custom_type_script = "uid://cfw8rgk40bl27"

@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="QuizQuestion" load_steps=2 format=3 uid="uid://btrxcadks4gq0"]
+
+[ext_resource type="Script" uid="uid://cfw8rgk40bl27" path="res://resources/questions/quiz_questions.gd" id="1_ksac3"]
+
+[resource]
+script = ExtResource("1_ksac3")
+question = "Tentukan ekuivalen dari: \"Aku jujur jika dan hanya jika aku dipercaya.\""
+options = Array[String](["Jika aku jujur, maka aku dipercaya.", "Jika aku dipercaya, maka aku jujur.", "Jika aku tidak dipercaya, maka aku tidak jujur.", "Semua benar."])
+timer = 30
+correct_answer = "D"
+metadata/_custom_type_script = "uid://cfw8rgk40bl27"

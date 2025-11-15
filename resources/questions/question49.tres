@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="QuizQuestion" load_steps=2 format=3 uid="uid://yvd12tfb13kr"]
+
+[ext_resource type="Script" uid="uid://cfw8rgk40bl27" path="res://resources/questions/quiz_questions.gd" id="1_v2yca"]
+
+[resource]
+script = ExtResource("1_v2yca")
+question = "Suatu parabola y = x^(2) + mx + n memiliki titik puncak (3, -1) dan memotong sumbu x di (2, 0) maka m+n = ..."
+options = Array[String](["1", "2", "3", "4"])
+timer = 30
+correct_answer = "B"
+metadata/_custom_type_script = "uid://cfw8rgk40bl27"

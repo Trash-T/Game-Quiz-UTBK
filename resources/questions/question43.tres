@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="QuizQuestion" load_steps=2 format=3 uid="uid://b1jqcr7wjyvte"]
+
+[ext_resource type="Script" uid="uid://cfw8rgk40bl27" path="res://resources/questions/quiz_questions.gd" id="1_sx4a6"]
+
+[resource]
+script = ExtResource("1_sx4a6")
+question = "A adalah suatu titik dengan koordinat A = (9, 18). Apabila titik tersebut dicerminkan pada garis x = 2025, maka hasilnya adalah ..."
+options = Array[String](["(4991, 18)", "(4991, -18)", "(4994, 18)", "(4994, -18)"])
+timer = 30
+correct_answer = "A"
+metadata/_custom_type_script = "uid://cfw8rgk40bl27"

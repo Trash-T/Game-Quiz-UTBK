@@ -1,0 +1,325 @@
+[gd_scene load_steps=14 format=3 uid="uid://c5vqcyn1dg8hr"]
+
+[ext_resource type="Texture2D" uid="uid://drwograd4q03p" path="res://assets/background.png" id="1_6ca5t"]
+[ext_resource type="Script" uid="uid://dxhgkg83ty3rr" path="res://scripts/game_ended.gd" id="1_ru5vr"]
+[ext_resource type="Texture2D" uid="uid://b82herq7csiaj" path="res://assets/chair_front.png" id="2_ru5vr"]
+[ext_resource type="Texture2D" uid="uid://bn0b0jor2rhss" path="res://assets/cin_bar.png" id="3_hcmpl"]
+[ext_resource type="FontFile" uid="uid://dyttdoo6nuy0p" path="res://assets/fonts/BoldPixels.ttf" id="4_hcmpl"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_50mj0"]
+bg_color = Color(0.952941, 0.917647, 0.847059, 1)
+border_width_left = 8
+border_width_top = 8
+border_width_right = 8
+border_width_bottom = 8
+border_color = Color(0.537255, 0.152941, 0.345098, 1)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_o30xp"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ehkc1"]
+bg_color = Color(0.952941, 0.917647, 0.847059, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.537255, 0.152941, 0.345098, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0cgfr"]
+bg_color = Color(0.952941, 0.917647, 0.847059, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.537255, 0.152941, 0.345098, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0iian"]
+bg_color = Color(0.537255, 0.152941, 0.345098, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.545098, 0.172549, 0.352941, 1)
+
+[sub_resource type="Animation" id="Animation_hcmpl"]
+resource_name = "transition"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Panel:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Panel:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_50mj0"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Panel:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Panel:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0, 0, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_o30xp"]
+_data = {
+&"RESET": SubResource("Animation_50mj0"),
+&"transition": SubResource("Animation_hcmpl")
+}
+
+[node name="game_ended" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ru5vr")
+
+[node name="background" type="TextureRect" parent="."]
+z_index = -5
+custom_minimum_size = Vector2(640, 360)
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+texture = ExtResource("1_6ca5t")
+metadata/_edit_lock_ = true
+
+[node name="TextureRect3" type="TextureRect" parent="."]
+z_index = 5
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_hcmpl")
+metadata/_edit_lock_ = true
+
+[node name="congrats_label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -744.0
+offset_top = -333.0
+offset_right = 744.0
+offset_bottom = 21.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.952941, 0.917647, 0.847059, 1)
+theme_override_colors/font_outline_color = Color(0.537255, 0.152941, 0.345098, 1)
+theme_override_constants/line_spacing = -30
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("4_hcmpl")
+theme_override_font_sizes/font_size = 144
+text = "CONGRATULATIONS! THE WINNER IS..."
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="one_winner" type="Panel" parent="."]
+visible = false
+z_index = 20
+layout_mode = 0
+offset_left = 645.0
+offset_top = 574.0
+offset_right = 1304.0
+offset_bottom = 697.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_50mj0")
+
+[node name="winner" type="Label" parent="one_winner"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.537255, 0.152941, 0.345098, 1)
+theme_override_constants/line_spacing = -30
+theme_override_constants/outline_size = 0
+theme_override_fonts/font = ExtResource("4_hcmpl")
+theme_override_font_sizes/font_size = 108
+text = "Player 1"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+metadata/_edit_lock_ = true
+
+[node name="two_winners" type="HBoxContainer" parent="."]
+visible = false
+z_index = 20
+layout_mode = 0
+offset_left = 240.0
+offset_top = 575.0
+offset_right = 1701.0
+offset_bottom = 698.0
+theme_override_constants/separation = 120
+alignment = 1
+
+[node name="winner1" type="Panel" parent="two_winners"]
+custom_minimum_size = Vector2(659, 123)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_50mj0")
+
+[node name="winner1_name" type="Label" parent="two_winners/winner1"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.537255, 0.152941, 0.345098, 1)
+theme_override_constants/line_spacing = -30
+theme_override_constants/outline_size = 0
+theme_override_fonts/font = ExtResource("4_hcmpl")
+theme_override_font_sizes/font_size = 108
+text = "Player 1"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+metadata/_edit_lock_ = true
+
+[node name="winner2" type="Panel" parent="two_winners"]
+custom_minimum_size = Vector2(659, 123)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_50mj0")
+
+[node name="winner2_name" type="Label" parent="two_winners/winner2"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.537255, 0.152941, 0.345098, 1)
+theme_override_constants/line_spacing = -30
+theme_override_constants/outline_size = 0
+theme_override_fonts/font = ExtResource("4_hcmpl")
+theme_override_font_sizes/font_size = 108
+text = "Player 1"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+metadata/_edit_lock_ = true
+
+[node name="front_chair" type="TextureRect" parent="."]
+z_index = 5
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_ru5vr")
+metadata/_edit_lock_ = true
+
+[node name="main_menu" type="Button" parent="."]
+z_index = 20
+custom_minimum_size = Vector2(0, 75)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -937.0
+offset_top = 330.0
+offset_right = -531.0
+offset_bottom = 405.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 4
+mouse_default_cursor_shape = 2
+theme_override_colors/font_hover_color = Color(0.537255, 0.160784, 0.352941, 1)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(0.541176, 0.168627, 0.360784, 1)
+theme_override_fonts/font = ExtResource("4_hcmpl")
+theme_override_font_sizes/font_size = 48
+theme_override_styles/focus = SubResource("StyleBoxEmpty_o30xp")
+theme_override_styles/hover = SubResource("StyleBoxFlat_ehkc1")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_0cgfr")
+theme_override_styles/normal = SubResource("StyleBoxFlat_0iian")
+text = "MAIN MENU"
+
+[node name="quit" type="Button" parent="."]
+z_index = 20
+custom_minimum_size = Vector2(0, 75)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 533.0
+offset_top = 330.0
+offset_right = 939.0
+offset_bottom = 405.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 4
+mouse_default_cursor_shape = 2
+theme_override_colors/font_hover_color = Color(0.537255, 0.160784, 0.352941, 1)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(0.541176, 0.168627, 0.360784, 1)
+theme_override_fonts/font = ExtResource("4_hcmpl")
+theme_override_font_sizes/font_size = 48
+theme_override_styles/focus = SubResource("StyleBoxEmpty_o30xp")
+theme_override_styles/hover = SubResource("StyleBoxFlat_ehkc1")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_0cgfr")
+theme_override_styles/normal = SubResource("StyleBoxFlat_0iian")
+text = "QUIT"
+
+[node name="Panel" type="Panel" parent="."]
+modulate = Color(0, 0, 0, 1)
+z_index = 25
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="transition" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_o30xp")
+}
+autoplay = "transition"
+
+[connection signal="pressed" from="main_menu" to="." method="_on_main_menu_pressed"]
+[connection signal="pressed" from="quit" to="." method="_on_quit_pressed"]

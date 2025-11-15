@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="QuizQuestion" load_steps=2 format=3 uid="uid://l7shfr1yoqt5"]
+
+[ext_resource type="Script" uid="uid://cfw8rgk40bl27" path="res://resources/questions/quiz_questions.gd" id="1_6yxel"]
+
+[resource]
+script = ExtResource("1_6yxel")
+question = "Ada 4 pilihan warna baju dan 3 pilihan celana. Berapa banyak pasangan baju-celana yang mungkin?"
+options = Array[String](["4", "7", "12", "24"])
+timer = 30
+correct_answer = "C"
+metadata/_custom_type_script = "uid://cfw8rgk40bl27"

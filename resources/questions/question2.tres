@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="QuizQuestion" load_steps=2 format=3 uid="uid://s2bmkhtj2je6"]
+
+[ext_resource type="Script" uid="uid://cfw8rgk40bl27" path="res://resources/questions/quiz_questions.gd" id="1_x18q5"]
+
+[resource]
+script = ExtResource("1_x18q5")
+question = "Suku tengah suatu barisan aritmetika adalah 23. Jika suku terakhirnya 43 dan suku ketinganya 13, maka banyak suku barisan itu adalah"
+options = Array[String](["5", "7", "9", "11"])
+timer = 30
+correct_answer = "C"
+metadata/_custom_type_script = "uid://cfw8rgk40bl27"

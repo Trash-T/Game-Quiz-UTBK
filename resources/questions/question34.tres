@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="QuizQuestion" load_steps=2 format=3 uid="uid://1an1wkiehpe4"]
+
+[ext_resource type="Script" uid="uid://cfw8rgk40bl27" path="res://resources/questions/quiz_questions.gd" id="1_t6j6n"]
+
+[resource]
+script = ExtResource("1_t6j6n")
+question = "Tentukan negasi dari: \"Aku berhasil dan aku bahagia.\""
+options = Array[String](["Aku berhasil atau aku bahagia.", "Aku tidak berhasil atau aku tidak bahagia.", "Aku tidak berhasil dan aku bahagia.", "Aku berhasil dan aku tidak bahagia."])
+timer = 30
+correct_answer = "B"
+metadata/_custom_type_script = "uid://cfw8rgk40bl27"

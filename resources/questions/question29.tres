@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="QuizQuestion" load_steps=2 format=3 uid="uid://1pk5v0g2kud1"]
+
+[ext_resource type="Script" uid="uid://cfw8rgk40bl27" path="res://resources/questions/quiz_questions.gd" id="1_ha1m4"]
+
+[resource]
+script = ExtResource("1_ha1m4")
+question = "Tentukan ekuivalen dari: \"Jika aku tidak tidur, maka aku mengantuk.\""
+options = Array[String](["Jika aku tidak mengantuk, maka aku tidur.", "Jika aku mengantuk, maka aku tidak tidur.", "Jika aku tidur, maka aku mengantuk.", "Jika aku tidak tidur, maka aku tidak mengantuk."])
+timer = 30
+correct_answer = "A"
+metadata/_custom_type_script = "uid://cfw8rgk40bl27"

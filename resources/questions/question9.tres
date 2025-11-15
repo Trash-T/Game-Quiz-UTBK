@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="QuizQuestion" load_steps=2 format=3 uid="uid://tnekwke2v2te"]
+
+[ext_resource type="Script" uid="uid://cfw8rgk40bl27" path="res://resources/questions/quiz_questions.gd" id="1_l3rd8"]
+
+[resource]
+script = ExtResource("1_l3rd8")
+question = "Semua Pelaut adalah perenang. Sebagain perenang adalah penyelam. Simpulan yang tepat adalah ..."
+options = Array[String](["Semua penyelam adalah pelaut.", "Sebagian penyelam bukan perenang.", "Semua pelaut adalah penyelam.", "Sebagian pelaut bukan penyelam."])
+timer = 30
+correct_answer = "D"
+metadata/_custom_type_script = "uid://cfw8rgk40bl27"

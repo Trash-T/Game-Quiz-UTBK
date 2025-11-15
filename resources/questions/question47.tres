@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="QuizQuestion" load_steps=2 format=3 uid="uid://cf548d7bh07cu"]
+
+[ext_resource type="Script" uid="uid://cfw8rgk40bl27" path="res://resources/questions/quiz_questions.gd" id="1_n5o41"]
+
+[resource]
+script = ExtResource("1_n5o41")
+question = "Misalkan (an) adalah barisan geometri yang memenuhi sistem a2 + a5 - a4 = 10, a3 + a6 - a5 = 20. Nilai dari a2 adalah"
+options = Array[String](["-2", "-1", "1", "2"])
+timer = 30
+correct_answer = "D"
+metadata/_custom_type_script = "uid://cfw8rgk40bl27"

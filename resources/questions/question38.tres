@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="QuizQuestion" load_steps=2 format=3 uid="uid://dd8crrjvhc3k3"]
+
+[ext_resource type="Script" uid="uid://cfw8rgk40bl27" path="res://resources/questions/quiz_questions.gd" id="1_jayrx"]
+
+[resource]
+script = ExtResource("1_jayrx")
+question = "Dari huruf-huruf pada kata STATISTIK, berapa banyak permutasi berbeda yang dapat dibentuk jika huruf-huruf vokal harus berdekatan?"
+options = Array[String](["1.260", "2.520", "5.040", "10.080"])
+timer = 30
+correct_answer = "A"
+metadata/_custom_type_script = "uid://cfw8rgk40bl27"

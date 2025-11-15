@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="QuizQuestion" load_steps=2 format=3 uid="uid://bwuxt2lxvhc4k"]
+
+[ext_resource type="Script" uid="uid://cfw8rgk40bl27" path="res://resources/questions/quiz_questions.gd" id="1_70jt8"]
+
+[resource]
+script = ExtResource("1_70jt8")
+question = "Banyak susunan berbeda dari huruf-huruf pada kata ELEKTRO adalah ..."
+options = Array[String](["2520", "5040", "10080", "20160"])
+timer = 30
+correct_answer = "A"
+metadata/_custom_type_script = "uid://cfw8rgk40bl27"

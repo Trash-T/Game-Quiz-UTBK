@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="QuizQuestion" load_steps=2 format=3 uid="uid://7sfuqcua4g1y"]
+
+[ext_resource type="Script" uid="uid://cfw8rgk40bl27" path="res://resources/questions/quiz_questions.gd" id="1_k012g"]
+
+[resource]
+script = ExtResource("1_k012g")
+question = "Sebuah buku bekas dijual 75% lebih rendah dari harga buku baru. Jika harga buku bekas adalah Rp25.000,00, berapakah harga buku baru?"
+options = Array[String](["Rp80.000,00", "Rp85.000,00", "Rp95.000,00", "Rp100.000,00"])
+timer = 30
+correct_answer = "D"
+metadata/_custom_type_script = "uid://cfw8rgk40bl27"

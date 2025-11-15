@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="QuizQuestion" load_steps=2 format=3 uid="uid://cehgkhp7105i1"]
+
+[ext_resource type="Script" uid="uid://cfw8rgk40bl27" path="res://resources/questions/quiz_questions.gd" id="1_s7mh3"]
+
+[resource]
+script = ExtResource("1_s7mh3")
+question = "Pernyataan: \"Jika listrik padam, maka lampu mati.\" Ekuivalennya adalah ..."
+options = Array[String](["Jika lampu mati, maka listrik padam.", "Jika lampu tidak mati, maka listrik tidak padam.", "Jika listrik tidak padam, maka lampu tidak mati.", "Jika lampu tidak mati, maka listrik padam."])
+timer = 30
+correct_answer = "B"
+metadata/_custom_type_script = "uid://cfw8rgk40bl27"

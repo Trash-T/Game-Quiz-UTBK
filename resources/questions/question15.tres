@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="QuizQuestion" load_steps=2 format=3 uid="uid://bhr82tudt7546"]
+
+[ext_resource type="Script" uid="uid://cfw8rgk40bl27" path="res://resources/questions/quiz_questions.gd" id="1_deywa"]
+
+[resource]
+script = ExtResource("1_deywa")
+question = "Tentukan negasi dari pernyataan: \"Aku belajar dan aku lulus.\""
+options = Array[String](["Aku belajar dan aku tidak lulus.", "Aku tidak belajar dan aku tidak lulus.", "Aku tidak belajar atau aku tidak lulus.", "Semua jawaban salah."])
+timer = 30
+correct_answer = "C"
+metadata/_custom_type_script = "uid://cfw8rgk40bl27"

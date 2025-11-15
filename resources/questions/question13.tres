@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="QuizQuestion" load_steps=2 format=3 uid="uid://bjpxs2hrlcvv2"]
+
+[ext_resource type="Script" uid="uid://cfw8rgk40bl27" path="res://resources/questions/quiz_questions.gd" id="1_4nk3w"]
+
+[resource]
+script = ExtResource("1_4nk3w")
+question = "Tentukan bentuk ekuivalen dari pernyataan: \"Jika aku tidak makan, maka aku mati.\""
+options = Array[String](["Jika aku tidak mati, maka aku makan.", "Jika aku mati, maka aku tidak makan.", "Jika aku makan, maka aku mati.", "Semua orang pasti mati."])
+timer = 30
+correct_answer = "A"
+metadata/_custom_type_script = "uid://cfw8rgk40bl27"

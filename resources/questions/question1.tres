@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="QuizQuestion" load_steps=2 format=3 uid="uid://vyuhkrmwj1b7"]
+
+[ext_resource type="Script" uid="uid://cfw8rgk40bl27" path="res://resources/questions/quiz_questions.gd" id="1_clxkg"]
+
+[resource]
+script = ExtResource("1_clxkg")
+question = "Apabila tidak ditanam dalam pot berlubang, akar tanaman akan mudah membusuk. Fenomena tersebut terjadi pada tanaman P. Manakah simpulan berikut yang benar?"
+options = Array[String](["Tanaman P dapat ditanam dalam pot berlubang agar tidak mudah membusuk.", "Semua akar tanaman akan tumbuh baik jika ditanam dalam pot berlubang.", "Sebagian tanaman sebaiknya ditanam dalam pot berlubang, kecuali tanaman P.", "Akar tanaman P akan mudah membusuk jika tidak ditanam dalam potberlubang."])
+timer = 30
+correct_answer = "D"
+metadata/_custom_type_script = "uid://cfw8rgk40bl27"

@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="QuizQuestion" load_steps=2 format=3 uid="uid://bgudft8dls78x"]
+
+[ext_resource type="Script" uid="uid://cfw8rgk40bl27" path="res://resources/questions/quiz_questions.gd" id="1_c6hhw"]
+
+[resource]
+script = ExtResource("1_c6hhw")
+question = "Tentukan negasi dari: \"Jika aku berlari, maka aku lelah.\""
+options = Array[String](["Aku berlari dan aku lelah.", "Aku berlari dan aku tidak lelah.", "Aku tidak berlari dan aku lelah.", "Aku tidak berlari dan aku tidak lelah."])
+timer = 30
+correct_answer = "B"
+metadata/_custom_type_script = "uid://cfw8rgk40bl27"

@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="QuizQuestion" load_steps=2 format=3 uid="uid://dot15equv0nop"]
+
+[ext_resource type="Script" uid="uid://cfw8rgk40bl27" path="res://resources/questions/quiz_questions.gd" id="1_g6xie"]
+
+[resource]
+script = ExtResource("1_g6xie")
+question = "Tentukan ekuivalen dari: \"Jika aku rajin, maka aku pintar.\""
+options = Array[String](["Jika aku tidak rajin, maka aku tidak pintar.", "Jika aku tidak pintar, maka aku tidak rajin.", "Jika aku tidak pintar, maka aku rajin.", "Jika aku pintar, maka aku rajin."])
+timer = 30
+correct_answer = "B"
+metadata/_custom_type_script = "uid://cfw8rgk40bl27"

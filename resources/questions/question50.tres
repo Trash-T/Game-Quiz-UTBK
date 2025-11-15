@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="QuizQuestion" load_steps=2 format=3 uid="uid://3hh7qc1dthtr"]
+
+[ext_resource type="Script" uid="uid://cfw8rgk40bl27" path="res://resources/questions/quiz_questions.gd" id="1_mqa21"]
+
+[resource]
+script = ExtResource("1_mqa21")
+question = "Operasi $ pada himpunan bilngan bulat didefinisikan dengan aturan a$b = b(b + a) - 1. Maka nilai 2$(3$(-1)) ="
+options = Array[String](["-10", "0", "2", "10"])
+timer = 30
+correct_answer = "C"
+metadata/_custom_type_script = "uid://cfw8rgk40bl27"

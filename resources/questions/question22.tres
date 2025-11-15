@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="QuizQuestion" load_steps=2 format=3 uid="uid://gr0ywxtjquka"]
+
+[ext_resource type="Script" uid="uid://cfw8rgk40bl27" path="res://resources/questions/quiz_questions.gd" id="1_nd4cw"]
+
+[resource]
+script = ExtResource("1_nd4cw")
+question = "Tentukan negasi dari: \"Aku belajar jika dan hanya jika aku lulus.\""
+options = Array[String](["Aku belajar jika dan hanya jika aku tidak lulus.", "Aku tidak belajar jika dan hanya jika aku lulus.", "Aku tidak belajar jika dan hanya jika aku tidak lulus.", "Aku tidak belajar dan aku tidak lulus."])
+timer = 30
+correct_answer = "A"
+metadata/_custom_type_script = "uid://cfw8rgk40bl27"

@@ -1,0 +1,5 @@
+- dialogue
+- action turn
+- main menu
+- winner
+- round

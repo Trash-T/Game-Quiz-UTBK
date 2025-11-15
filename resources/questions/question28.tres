@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="QuizQuestion" load_steps=2 format=3 uid="uid://cprneyw142w1u"]
+
+[ext_resource type="Script" uid="uid://cfw8rgk40bl27" path="res://resources/questions/quiz_questions.gd" id="1_2isk1"]
+
+[resource]
+script = ExtResource("1_2isk1")
+question = "Tentukan negasi dari: \"Aku rajin atau aku pintar.\""
+options = Array[String](["Aku rajin dan aku pintar.", "Aku tidak rajin dan aku tidak pintar.", "Aku tidak rajin atau aku tidak pintar.", "Semua orang rajin."])
+timer = 30
+correct_answer = "B"
+metadata/_custom_type_script = "uid://cfw8rgk40bl27"

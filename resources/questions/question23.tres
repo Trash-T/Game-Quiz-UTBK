@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="QuizQuestion" load_steps=2 format=3 uid="uid://bp8nome65qfu5"]
+
+[ext_resource type="Script" uid="uid://cfw8rgk40bl27" path="res://resources/questions/quiz_questions.gd" id="1_s2ix5"]
+
+[resource]
+script = ExtResource("1_s2ix5")
+question = "Tentukan ekuivalen dari: \"Jika aku sakit, maka aku tidak masuk sekolah.\""
+options = Array[String](["Jika aku masuk sekolah, maka aku tidak sakit.", "Jika aku sakit, maka aku masuk sekolah.", "Jika aku tidak sakit, maka aku tidak masuk sekolah.", "Semua orang sakit tidak sekolah."])
+timer = 30
+correct_answer = "A"
+metadata/_custom_type_script = "uid://cfw8rgk40bl27"

@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="QuizQuestion" load_steps=2 format=3 uid="uid://ck1mkehoh1yu0"]
+
+[ext_resource type="Script" uid="uid://cfw8rgk40bl27" path="res://resources/questions/quiz_questions.gd" id="1_rk5fy"]
+
+[resource]
+script = ExtResource("1_rk5fy")
+question = "Apabila rata rata bilangan adalah 10 dan jumlah dari 3 bilangannya adalah 16 berapakah rata rata 2 bilangan lainnya?"
+options = Array[String](["-17", "-1", "17", "7"])
+timer = 30
+correct_answer = "C"
+metadata/_custom_type_script = "uid://cfw8rgk40bl27"

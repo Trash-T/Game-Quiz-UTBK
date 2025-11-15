@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="QuizQuestion" load_steps=2 format=3 uid="uid://dtrxhfxveieoh"]
+
+[ext_resource type="Script" uid="uid://cfw8rgk40bl27" path="res://resources/questions/quiz_questions.gd" id="1_3km3p"]
+
+[resource]
+script = ExtResource("1_3km3p")
+question = "Untuk m dan b bilangan real dan m > 0 dan b > 0, maka garis dengan persamaan y = mx − b
+TIDAK mungkin memuat titik?"
+options = Array[String](["(-20, 24)", "(2024, 0)", "(0, -2024)", "(20, -24)"])
+timer = 30
+correct_answer = "A"
+metadata/_custom_type_script = "uid://cfw8rgk40bl27"

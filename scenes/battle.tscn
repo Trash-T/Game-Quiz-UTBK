@@ -1,0 +1,1155 @@
+[gd_scene load_steps=45 format=3 uid="uid://b343l03kmmckh"]
+
+[ext_resource type="Texture2D" uid="uid://drwograd4q03p" path="res://assets/background.png" id="1_dn72j"]
+[ext_resource type="Script" uid="uid://bo8i16s07ppnp" path="res://scripts/battle.gd" id="1_ekamt"]
+[ext_resource type="Resource" uid="uid://u38rkxjt16jv" path="res://resources/question collections/questions.tres" id="2_p0caf"]
+[ext_resource type="Texture2D" uid="uid://gk4xhunjcfpu" path="res://assets/player1.png" id="2_th188"]
+[ext_resource type="Texture2D" uid="uid://b82herq7csiaj" path="res://assets/chair_front.png" id="3_a12nh"]
+[ext_resource type="Texture2D" uid="uid://by5q4y0d5akoy" path="res://assets/player2.png" id="3_f4pi3"]
+[ext_resource type="Texture2D" uid="uid://bn0b0jor2rhss" path="res://assets/cin_bar.png" id="4_lpir7"]
+[ext_resource type="Texture2D" uid="uid://c6bdr4cy1bvhf" path="res://assets/player1_menu.png" id="4_yahae"]
+[ext_resource type="FontFile" uid="uid://dyttdoo6nuy0p" path="res://assets/fonts/BoldPixels.ttf" id="5_v7i3o"]
+[ext_resource type="Texture2D" uid="uid://cxxb34hna2oxj" path="res://assets/wasd.png" id="6_66ngm"]
+[ext_resource type="LabelSettings" uid="uid://8tlxefea8cwy" path="res://resources/fonts/text.tres" id="6_yahae"]
+[ext_resource type="Texture2D" uid="uid://d2dba1wq1ffy3" path="res://assets/player2_menu.png" id="10_66ngm"]
+[ext_resource type="Texture2D" uid="uid://4u3kn5xg80pn" path="res://assets/usbt.png" id="11_03edq"]
+[ext_resource type="Texture2D" uid="uid://drw4ifelvxade" path="res://assets/ui/up.png" id="12_vceff"]
+[ext_resource type="Texture2D" uid="uid://brxs43jdh3xh0" path="res://assets/ui/left.png" id="13_ekamt"]
+[ext_resource type="Texture2D" uid="uid://ik5el3qd6alq" path="res://assets/ui/right.png" id="14_djc8l"]
+[ext_resource type="Texture2D" uid="uid://b4mvguni3fp55" path="res://assets/ui/down.png" id="15_h4dll"]
+[ext_resource type="Texture2D" uid="uid://dva4ee8iyw2pt" path="res://assets/player1_attack.png" id="18_p0caf"]
+[ext_resource type="Texture2D" uid="uid://cijvuksjj8bg0" path="res://assets/player2_attack.png" id="19_61i1y"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_03edq"]
+bg_color = Color(0.94902, 0.388235, 0.352941, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.54902, 0.180392, 0.356863, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_22uqi"]
+bg_color = Color(0.392157, 0.835294, 0.705882, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.54902, 0.176471, 0.360784, 1)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_v7i3o"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_66ngm"]
+bg_color = Color(0.952941, 0.917647, 0.847059, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.537255, 0.152941, 0.345098, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6ni85"]
+bg_color = Color(0.952941, 0.917647, 0.847059, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.537255, 0.152941, 0.345098, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vceff"]
+bg_color = Color(0.537255, 0.152941, 0.345098, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.545098, 0.172549, 0.352941, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ekamt"]
+bg_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_djc8l"]
+bg_color = Color(0.526251, 0.604211, 0.74778, 1)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color(0.952941, 0.917647, 0.847059, 1)
+
+[sub_resource type="Animation" id="Animation_03edq"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("quiz_time/Panel/Label:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-852, 70)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("quiz_time:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("quiz_time:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("quiz_panel:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("quiz_panel:modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_djc8l"]
+resource_name = "quiz_panel_appear"
+length = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("quiz_panel:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("quiz_panel:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_h4dll"]
+resource_name = "quiz_panel_disappear"
+length = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("quiz_panel:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("quiz_panel:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+
+[sub_resource type="Animation" id="Animation_66ngm"]
+resource_name = "quiz_time"
+length = 1.6
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("quiz_time/Panel/Label:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.6),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-1488, 70), Vector2(1967, 70)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("quiz_time:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1.6),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("quiz_time:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.2, 1.4, 1.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_22uqi"]
+_data = {
+&"RESET": SubResource("Animation_03edq"),
+&"quiz_panel_appear": SubResource("Animation_djc8l"),
+&"quiz_panel_disappear": SubResource("Animation_h4dll"),
+&"quiz_time": SubResource("Animation_66ngm")
+}
+
+[sub_resource type="Animation" id="Animation_61i1y"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("player1:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(732, 665.226)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("player1_menu:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("player1:texture")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("2_th188")]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("player1:z_index")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("player1:modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_1m01a"]
+resource_name = "attack"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("player1:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.4, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [ExtResource("2_th188"), ExtResource("18_p0caf"), ExtResource("2_th188")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("player1:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.4, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(732, 665.226), Vector2(874, 665.226), Vector2(732, 665.226)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("player1:z_index")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.6),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+
+[sub_resource type="Animation" id="Animation_saiin"]
+resource_name = "damaged"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("player1_menu:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.2, 0.4, 0.6, 0.8, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 0.364706, 0.454902, 0.819608), Color(1, 1, 1, 1), Color(1, 0.364706, 0.454902, 0.819608), Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("player1:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.3, 0.4, 0.5, 0.6, 0.7),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 0.364706, 0.454902, 0), Color(1, 1, 1, 1), Color(1, 0.364706, 0.454902, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_jt4d8"]
+resource_name = "heal"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("player1_menu:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.2, 0.4, 0.6, 0.8, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(0.52549, 1, 0.556863, 0.819608), Color(1, 1, 1, 1), Color(0.52549, 1, 0.556863, 0.819608), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_p0caf"]
+resource_name = "idle"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("player1:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(732, 665.226), Vector2(732, 645.226), Vector2(732, 665.226)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_saiin"]
+_data = {
+&"RESET": SubResource("Animation_61i1y"),
+&"attack": SubResource("Animation_1m01a"),
+&"damaged": SubResource("Animation_saiin"),
+&"heal": SubResource("Animation_jt4d8"),
+&"idle": SubResource("Animation_p0caf")
+}
+
+[sub_resource type="Animation" id="Animation_fpf3k"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../../../player2:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1190, 663.226)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../..:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../../../player2:texture")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("3_f4pi3")]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("../../../player2:z_index")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("../../../player2:modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_lv4so"]
+resource_name = "attack"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../../../player2:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3, 0.666667),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [ExtResource("3_f4pi3"), ExtResource("19_61i1y"), ExtResource("3_f4pi3")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../../../player2:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.3, 0.55, 0.9),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(1190, 663.226), Vector2(1071, 663.226), Vector2(1159.25, 663.226), Vector2(1190, 663.226)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../../../player2:z_index")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.35, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [0, 1, 0]
+}
+
+[sub_resource type="Animation" id="Animation_bi5l8"]
+resource_name = "damaged"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../..:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.2, 0.4, 0.6, 0.8, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 0.364706, 0.454902, 0.819608), Color(1, 1, 1, 1), Color(1, 0.364706, 0.454902, 0.819608), Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../../../player2:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.3, 0.4, 0.5, 0.6, 0.7),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 0.364706, 0.454902, 0), Color(1, 1, 1, 1), Color(1, 0.364706, 0.454902, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_kl6ie"]
+resource_name = "heal"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../..:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.2, 0.4, 0.6, 0.8, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(0.52549, 1, 0.556863, 0.819608), Color(1, 1, 1, 1), Color(0.52549, 1, 0.556863, 0.819608), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_dd63g"]
+resource_name = "idle"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../../../player2:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(1190, 663.226), Vector2(1190, 633.226), Vector2(1190, 663.226)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_bi5l8"]
+_data = {
+&"RESET": SubResource("Animation_fpf3k"),
+&"attack": SubResource("Animation_lv4so"),
+&"damaged": SubResource("Animation_bi5l8"),
+&"heal": SubResource("Animation_kl6ie"),
+&"idle": SubResource("Animation_dd63g")
+}
+
+[node name="Battle" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ekamt")
+damage = 20
+small_damage = 10
+heal = 10
+quiz_questions = ExtResource("2_p0caf")
+
+[node name="background" type="TextureRect" parent="."]
+z_index = -5
+custom_minimum_size = Vector2(640, 360)
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+texture = ExtResource("1_dn72j")
+metadata/_edit_lock_ = true
+
+[node name="player1" type="Sprite2D" parent="."]
+z_index = 1
+position = Vector2(732, 665.226)
+scale = Vector2(1.11905, 1.11905)
+texture = ExtResource("2_th188")
+
+[node name="player2" type="Sprite2D" parent="."]
+z_index = 1
+position = Vector2(1190, 663.226)
+scale = Vector2(1.119, 1.119)
+texture = ExtResource("3_f4pi3")
+
+[node name="front_chair" type="TextureRect" parent="."]
+z_index = 5
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_a12nh")
+metadata/_edit_lock_ = true
+
+[node name="TextureRect3" type="TextureRect" parent="."]
+z_index = 5
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("4_lpir7")
+metadata/_edit_lock_ = true
+
+[node name="player1_menu" type="TextureRect" parent="."]
+z_index = 8
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 30.0
+offset_top = -356.5
+offset_right = 531.0
+offset_bottom = 356.5
+grow_vertical = 2
+texture = ExtResource("4_yahae")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="player1_menu"]
+layout_mode = 0
+offset_left = 50.0
+offset_top = 253.0
+offset_right = 453.0
+offset_bottom = 424.0
+theme_override_constants/separation = 19
+
+[node name="player1_name" type="Label" parent="player1_menu/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.517647, 0.12549, 0.329412, 1)
+theme_override_fonts/font = ExtResource("5_v7i3o")
+theme_override_font_sizes/font_size = 64
+text = "Player 1"
+horizontal_alignment = 1
+
+[node name="player1_healthbar" type="ProgressBar" parent="player1_menu/VBoxContainer"]
+custom_minimum_size = Vector2(400, 65)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_styles/background = SubResource("StyleBoxFlat_03edq")
+theme_override_styles/fill = SubResource("StyleBoxFlat_22uqi")
+step = 1.0
+value = 50.0
+show_percentage = false
+
+[node name="Label" type="Label" parent="player1_menu/VBoxContainer/player1_healthbar"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "HP: 100/100"
+label_settings = ExtResource("6_yahae")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="options" type="Control" parent="player1_menu"]
+layout_mode = 2
+anchors_preset = 0
+offset_left = 50.0
+offset_top = 409.0
+offset_right = 453.0
+offset_bottom = 670.0
+
+[node name="quiz_option" type="TextureRect" parent="player1_menu/options"]
+layout_mode = 2
+offset_left = 42.0
+offset_top = 30.5
+offset_right = 369.0
+offset_bottom = 227.5
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("6_66ngm")
+expand_mode = 1
+
+[node name="action_option" type="Control" parent="player1_menu/options"]
+visible = false
+z_index = 8
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="player1_menu/options/action_option"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 21.0
+offset_bottom = -21.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 30
+alignment = 1
+
+[node name="player1_attack" type="Button" parent="player1_menu/options/action_option/VBoxContainer"]
+custom_minimum_size = Vector2(0, 75)
+layout_mode = 2
+size_flags_vertical = 4
+mouse_default_cursor_shape = 2
+theme_override_colors/font_hover_color = Color(0.537255, 0.160784, 0.352941, 1)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(0.541176, 0.168627, 0.360784, 1)
+theme_override_fonts/font = ExtResource("5_v7i3o")
+theme_override_font_sizes/font_size = 48
+theme_override_styles/focus = SubResource("StyleBoxEmpty_v7i3o")
+theme_override_styles/hover = SubResource("StyleBoxFlat_66ngm")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_6ni85")
+theme_override_styles/normal = SubResource("StyleBoxFlat_vceff")
+text = "Attack"
+
+[node name="player1_heal" type="Button" parent="player1_menu/options/action_option/VBoxContainer"]
+custom_minimum_size = Vector2(0, 75)
+layout_mode = 2
+size_flags_vertical = 4
+mouse_default_cursor_shape = 2
+theme_override_colors/font_hover_color = Color(0.537255, 0.160784, 0.352941, 1)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(0.541176, 0.168627, 0.360784, 1)
+theme_override_fonts/font = ExtResource("5_v7i3o")
+theme_override_font_sizes/font_size = 48
+theme_override_styles/focus = SubResource("StyleBoxEmpty_v7i3o")
+theme_override_styles/hover = SubResource("StyleBoxFlat_66ngm")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_6ni85")
+theme_override_styles/normal = SubResource("StyleBoxFlat_vceff")
+text = "Heal"
+
+[node name="cant_move" type="Panel" parent="player1_menu/options"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 22.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="player1_menu/options/cant_move"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "You can't move in this round!"
+label_settings = ExtResource("6_yahae")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="player2_menu" type="TextureRect" parent="."]
+z_index = 8
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 1389.0
+offset_top = -356.5
+offset_right = 1890.0
+offset_bottom = 356.5
+grow_vertical = 2
+texture = ExtResource("10_66ngm")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="player2_menu"]
+layout_mode = 0
+offset_left = 50.0
+offset_top = 253.0
+offset_right = 453.0
+offset_bottom = 424.0
+theme_override_constants/separation = 19
+
+[node name="player2_name" type="Label" parent="player2_menu/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.517647, 0.12549, 0.329412, 1)
+theme_override_fonts/font = ExtResource("5_v7i3o")
+theme_override_font_sizes/font_size = 64
+text = "Player 2"
+horizontal_alignment = 1
+
+[node name="player2_healthbar" type="ProgressBar" parent="player2_menu/VBoxContainer"]
+custom_minimum_size = Vector2(400, 65)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_styles/background = SubResource("StyleBoxFlat_03edq")
+theme_override_styles/fill = SubResource("StyleBoxFlat_22uqi")
+step = 1.0
+value = 50.0
+show_percentage = false
+
+[node name="Label" type="Label" parent="player2_menu/VBoxContainer/player2_healthbar"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "HP: 100/100"
+label_settings = ExtResource("6_yahae")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="options" type="Control" parent="player2_menu"]
+layout_mode = 2
+anchors_preset = 0
+offset_left = 50.0
+offset_top = 409.0
+offset_right = 453.0
+offset_bottom = 670.0
+
+[node name="quiz_option" type="TextureRect" parent="player2_menu/options"]
+visible = false
+layout_mode = 2
+offset_left = 42.0
+offset_top = 30.5
+offset_right = 369.0
+offset_bottom = 227.5
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("11_03edq")
+expand_mode = 1
+
+[node name="action_option" type="Control" parent="player2_menu/options"]
+z_index = 8
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="player2_menu/options/action_option"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 21.0
+offset_bottom = -21.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 30
+alignment = 1
+
+[node name="player2_attack" type="Button" parent="player2_menu/options/action_option/VBoxContainer"]
+custom_minimum_size = Vector2(0, 75)
+layout_mode = 2
+size_flags_vertical = 4
+mouse_default_cursor_shape = 2
+theme_override_colors/font_hover_color = Color(0.537255, 0.160784, 0.352941, 1)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(0.541176, 0.168627, 0.360784, 1)
+theme_override_fonts/font = ExtResource("5_v7i3o")
+theme_override_font_sizes/font_size = 48
+theme_override_styles/focus = SubResource("StyleBoxEmpty_v7i3o")
+theme_override_styles/hover = SubResource("StyleBoxFlat_66ngm")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_6ni85")
+theme_override_styles/normal = SubResource("StyleBoxFlat_vceff")
+text = "Attack"
+
+[node name="player2_heal" type="Button" parent="player2_menu/options/action_option/VBoxContainer"]
+custom_minimum_size = Vector2(0, 75)
+layout_mode = 2
+size_flags_vertical = 4
+mouse_default_cursor_shape = 2
+theme_override_colors/font_hover_color = Color(0.537255, 0.160784, 0.352941, 1)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(0.541176, 0.168627, 0.360784, 1)
+theme_override_fonts/font = ExtResource("5_v7i3o")
+theme_override_font_sizes/font_size = 48
+theme_override_styles/focus = SubResource("StyleBoxEmpty_v7i3o")
+theme_override_styles/hover = SubResource("StyleBoxFlat_66ngm")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_6ni85")
+theme_override_styles/normal = SubResource("StyleBoxFlat_vceff")
+text = "Heal"
+
+[node name="cant_move" type="Panel" parent="player2_menu/options"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 22.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="player2_menu/options/cant_move"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "You can't move in this round!"
+label_settings = ExtResource("6_yahae")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="quiz_time" type="Panel" parent="."]
+modulate = Color(1, 1, 1, 0)
+z_index = 10
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_lock_ = true
+
+[node name="Panel" type="Panel" parent="quiz_time"]
+custom_minimum_size = Vector2(0, 300)
+layout_mode = 1
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_ekamt")
+
+[node name="Label" type="Label" parent="quiz_time/Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -1812.0
+offset_top = -80.0
+offset_right = -972.0
+offset_bottom = 80.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("5_v7i3o")
+theme_override_font_sizes/font_size = 160
+text = "QUIZ TIME!"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="quiz_panel" type="Panel" parent="."]
+modulate = Color(1, 1, 1, 0)
+z_index = 8
+layout_mode = 0
+offset_left = 593.0
+offset_top = 192.0
+offset_right = 1330.0
+offset_bottom = 911.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_djc8l")
+
+[node name="timer_label" type="Label" parent="quiz_panel"]
+layout_mode = 0
+offset_left = 244.0
+offset_top = 29.0
+offset_right = 478.0
+offset_bottom = 125.0
+theme_override_fonts/font = ExtResource("5_v7i3o")
+theme_override_font_sizes/font_size = 96
+text = "00:00"
+
+[node name="quiz_timer" type="Timer" parent="quiz_panel"]
+one_shot = true
+
+[node name="VBoxContainer" type="VBoxContainer" parent="quiz_panel"]
+layout_mode = 0
+offset_left = 46.0
+offset_top = 136.0
+offset_right = 692.0
+offset_bottom = 668.0
+theme_override_constants/separation = 20
+
+[node name="question" type="Label" parent="quiz_panel/VBoxContainer"]
+custom_minimum_size = Vector2(646, 0)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("5_v7i3o")
+theme_override_font_sizes/font_size = 32
+text = "Apabila tidak ditanam dalam pot berlubang, akar tanaman akan mudah membusuk.
+Fenomena tersebut terjadi pada tanaman P. Manakah simpulan berikut yang benar?"
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="option_a" type="HBoxContainer" parent="quiz_panel/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 25
+
+[node name="TextureRect" type="TextureRect" parent="quiz_panel/VBoxContainer/option_a"]
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("12_vceff")
+expand_mode = 1
+
+[node name="Panel" type="Panel" parent="quiz_panel/VBoxContainer/option_a"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="option_a" type="Label" parent="quiz_panel/VBoxContainer/option_a/Panel"]
+custom_minimum_size = Vector2(525, 0)
+layout_mode = 2
+offset_left = 8.0
+offset_top = 10.0
+offset_right = 539.0
+offset_bottom = 66.0
+theme_override_fonts/font = ExtResource("5_v7i3o")
+theme_override_font_sizes/font_size = 24
+text = "Akar akan tumbuh dengan baik meski tanaman tidak ditanam dalam pot berlubang."
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="option_b" type="HBoxContainer" parent="quiz_panel/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 25
+
+[node name="TextureRect" type="TextureRect" parent="quiz_panel/VBoxContainer/option_b"]
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 2
+size_flags_horizontal = 5
+size_flags_vertical = 5
+texture = ExtResource("13_ekamt")
+expand_mode = 1
+
+[node name="Panel" type="Panel" parent="quiz_panel/VBoxContainer/option_b"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="option_b" type="Label" parent="quiz_panel/VBoxContainer/option_b/Panel"]
+custom_minimum_size = Vector2(525, 0)
+layout_mode = 2
+offset_left = 8.0
+offset_top = 10.0
+offset_right = 539.0
+offset_bottom = 66.0
+theme_override_fonts/font = ExtResource("5_v7i3o")
+theme_override_font_sizes/font_size = 24
+text = "ajhlgahgwljOGHERALGBELAGHRAKGHK AGKGAKkfgfalgl"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="option_c" type="HBoxContainer" parent="quiz_panel/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 25
+
+[node name="TextureRect" type="TextureRect" parent="quiz_panel/VBoxContainer/option_c"]
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 2
+size_flags_horizontal = 5
+size_flags_vertical = 5
+texture = ExtResource("14_djc8l")
+expand_mode = 1
+
+[node name="Panel" type="Panel" parent="quiz_panel/VBoxContainer/option_c"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="option_c" type="Label" parent="quiz_panel/VBoxContainer/option_c/Panel"]
+custom_minimum_size = Vector2(525, 0)
+layout_mode = 2
+offset_left = 8.0
+offset_top = 10.0
+offset_right = 539.0
+offset_bottom = 66.0
+theme_override_fonts/font = ExtResource("5_v7i3o")
+theme_override_font_sizes/font_size = 24
+text = "ajhlgahgwljOGHERALGBELAGHRAKGHK AGKGAKkfgfalgl"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="option_d" type="HBoxContainer" parent="quiz_panel/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 25
+
+[node name="TextureRect" type="TextureRect" parent="quiz_panel/VBoxContainer/option_d"]
+custom_minimum_size = Vector2(75, 75)
+layout_mode = 2
+size_flags_horizontal = 5
+size_flags_vertical = 5
+texture = ExtResource("15_h4dll")
+expand_mode = 1
+
+[node name="Panel" type="Panel" parent="quiz_panel/VBoxContainer/option_d"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="option_d" type="Label" parent="quiz_panel/VBoxContainer/option_d/Panel"]
+custom_minimum_size = Vector2(525, 0)
+layout_mode = 2
+offset_left = 8.0
+offset_top = 10.0
+offset_right = 539.0
+offset_bottom = 66.0
+theme_override_fonts/font = ExtResource("5_v7i3o")
+theme_override_font_sizes/font_size = 24
+text = "ajhlgahgwljOGHERALGBELAGHRAKGHK AGKGAKkfgfalgl"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="quiz_animation" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_22uqi")
+}
+
+[node name="player1_animation" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_saiin")
+}
+autoplay = "idle"
+
+[node name="player2_animation" type="AnimationPlayer" parent="."]
+root_node = NodePath("../player2_menu/VBoxContainer/player2_healthbar")
+libraries = {
+&"": SubResource("AnimationLibrary_bi5l8")
+}
+autoplay = "idle"
+
+[connection signal="pressed" from="player1_menu/options/action_option/VBoxContainer/player1_attack" to="." method="_on_player_1_attack_pressed"]
+[connection signal="pressed" from="player1_menu/options/action_option/VBoxContainer/player1_heal" to="." method="_on_player_1_heal_pressed"]
+[connection signal="pressed" from="player2_menu/options/action_option/VBoxContainer/player2_attack" to="." method="_on_player_2_attack_pressed"]
+[connection signal="pressed" from="player2_menu/options/action_option/VBoxContainer/player2_heal" to="." method="_on_player_2_heal_pressed"]
+[connection signal="timeout" from="quiz_panel/quiz_timer" to="." method="_on_quiz_timer_timeout"]

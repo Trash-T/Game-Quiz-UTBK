@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="QuizQuestion" load_steps=2 format=3 uid="uid://4ije5mhi0vnq"]
+
+[ext_resource type="Script" uid="uid://cfw8rgk40bl27" path="res://resources/questions/quiz_questions.gd" id="1_y87yk"]
+
+[resource]
+script = ExtResource("1_y87yk")
+question = "Pada tahun 2001 usia Bayu 7 tahun lebih tua dari usia Andi, sedangkan jumlah umur mereka pada tahun 2007 adalah 43 tahun. Pada tahun 2018 usia Bayu adalah..."
+options = Array[String](["39 tahun", "38 tahun", "37 tahun", "36 tahun"])
+timer = 30
+correct_answer = "D"
+metadata/_custom_type_script = "uid://cfw8rgk40bl27"

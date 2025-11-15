@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="QuizQuestion" load_steps=2 format=3 uid="uid://d3s2nulh2lsod"]
+
+[ext_resource type="Script" uid="uid://cfw8rgk40bl27" path="res://resources/questions/quiz_questions.gd" id="1_vfe0k"]
+
+[resource]
+script = ExtResource("1_vfe0k")
+question = "Semua mesin memiliki katup. Sebagian mesin berukuran kecil. Simpulan yang tepat adalah ..."
+options = Array[String](["Semua mesin berukuran kecil dan memiliki katup.", "Semua mesin berukuran kecil dan tidak memiliki katup.", "Sebagian mesin berukuran tidak kecil dan memiliki katup.", "Sebagian mesin berukuran kecil dan tidak memiliki katup."])
+timer = 30
+correct_answer = "C"
+metadata/_custom_type_script = "uid://cfw8rgk40bl27"

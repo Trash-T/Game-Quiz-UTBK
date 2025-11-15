@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="QuizQuestion" load_steps=2 format=3 uid="uid://dioxm401m3hye"]
+
+[ext_resource type="Script" uid="uid://cfw8rgk40bl27" path="res://resources/questions/quiz_questions.gd" id="1_l0shg"]
+
+[resource]
+script = ExtResource("1_l0shg")
+question = "Dari 5 siswa, akan dipilih seorang ketua dan seorang wakil ketua. Berapa banyak cara pemilihan yang mungkin?"
+options = Array[String](["10", "20", "25", "30"])
+timer = 30
+correct_answer = "B"
+metadata/_custom_type_script = "uid://cfw8rgk40bl27"

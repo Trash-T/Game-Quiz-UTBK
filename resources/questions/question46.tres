@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="QuizQuestion" load_steps=2 format=3 uid="uid://x1jccmytlw2h"]
+
+[ext_resource type="Script" uid="uid://cfw8rgk40bl27" path="res://resources/questions/quiz_questions.gd" id="1_k72b1"]
+
+[resource]
+script = ExtResource("1_k72b1")
+question = "Diberikan barisan aritmetika a1, a2, a3,... jika a1 + a2 + ... + a13 + a14 = - 70 dan a6 + a7 + a8 = - 12 maka a14 = ?"
+options = Array[String](["-18", "-16", "-14", "-12"])
+timer = 30
+correct_answer = "A"
+metadata/_custom_type_script = "uid://cfw8rgk40bl27"

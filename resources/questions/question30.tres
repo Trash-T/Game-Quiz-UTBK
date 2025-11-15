@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="QuizQuestion" load_steps=2 format=3 uid="uid://bgmau7u8qfshu"]
+
+[ext_resource type="Script" uid="uid://cfw8rgk40bl27" path="res://resources/questions/quiz_questions.gd" id="1_vy8aa"]
+
+[resource]
+script = ExtResource("1_vy8aa")
+question = "Tentukan negasi dari: \"Jika aku makan, maka aku kenyang.\""
+options = Array[String](["Aku tidak makan dan aku tidak kenyang.", "Aku makan dan aku kenyang.", "Aku makan dan aku tidak kenyang.", "Aku tidak makan dan aku kenyang."])
+timer = 30
+correct_answer = "C"
+metadata/_custom_type_script = "uid://cfw8rgk40bl27"

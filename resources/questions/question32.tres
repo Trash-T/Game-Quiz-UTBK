@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="QuizQuestion" load_steps=2 format=3 uid="uid://moeftxwv8h1a"]
+
+[ext_resource type="Script" uid="uid://cfw8rgk40bl27" path="res://resources/questions/quiz_questions.gd" id="1_55wjp"]
+
+[resource]
+script = ExtResource("1_55wjp")
+question = "Tentukan negasi dari: \"Aku jujur jika dan hanya jika aku dipercaya.\""
+options = Array[String](["Aku jujur jika dan hanya jika aku tidak dipercaya.", "Aku tidak jujur jika dan hanya jika aku dipercaya.", "Aku dipercaya jika dan hanya jika aku tidak jujur.", "Semua salah."])
+timer = 30
+correct_answer = "A"
+metadata/_custom_type_script = "uid://cfw8rgk40bl27"

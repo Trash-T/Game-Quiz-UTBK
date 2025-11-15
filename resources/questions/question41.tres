@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="QuizQuestion" load_steps=2 format=3 uid="uid://dc6fr77loqx4w"]
+
+[ext_resource type="Script" uid="uid://cfw8rgk40bl27" path="res://resources/questions/quiz_questions.gd" id="1_dgthk"]
+
+[resource]
+script = ExtResource("1_dgthk")
+question = "Dari 5 siswa, akan dipilih 2 orang untuk menjadi wakil kelas. Berapa banyak cara pemilihan yang dapat dilakukan?"
+options = Array[String](["5", "10", "15", "20"])
+timer = 30
+correct_answer = "B"
+metadata/_custom_type_script = "uid://cfw8rgk40bl27"

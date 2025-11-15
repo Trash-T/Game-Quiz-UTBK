@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="QuizQuestion" load_steps=2 format=3 uid="uid://nr40mleagwrp"]
+
+[ext_resource type="Script" uid="uid://cfw8rgk40bl27" path="res://resources/questions/quiz_questions.gd" id="1_xggrm"]
+
+[resource]
+script = ExtResource("1_xggrm")
+question = "Tentukan ekuivalen dari: \"Jika aku berangkat pagi, maka aku tidak terlambat.\""
+options = Array[String](["Jika aku tidak berangkat pagi, maka aku terlambat.", "Jika aku terlambat, maka aku tidak berangkat pagi.", "Jika aku berangkat pagi, maka aku terlambat.", "Jika aku tidak terlambat, maka aku tidak berangkat pagi."])
+timer = 30
+correct_answer = "B"
+metadata/_custom_type_script = "uid://cfw8rgk40bl27"

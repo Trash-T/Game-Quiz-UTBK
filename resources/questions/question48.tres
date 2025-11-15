@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="QuizQuestion" load_steps=2 format=3 uid="uid://ddv1ut83o2n7h"]
+
+[ext_resource type="Script" uid="uid://cfw8rgk40bl27" path="res://resources/questions/quiz_questions.gd" id="1_1f7yi"]
+
+[resource]
+script = ExtResource("1_1f7yi")
+question = "Jika f(1 − x) = 2x + 5, maka nilai dari f(2) adalah ..."
+options = Array[String](["1", "3", "5", "7"])
+timer = 30
+correct_answer = "B"
+metadata/_custom_type_script = "uid://cfw8rgk40bl27"

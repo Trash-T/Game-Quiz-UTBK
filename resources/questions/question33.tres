@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="QuizQuestion" load_steps=2 format=3 uid="uid://cgmh8hryuqum7"]
+
+[ext_resource type="Script" uid="uid://cfw8rgk40bl27" path="res://resources/questions/quiz_questions.gd" id="1_f6wm3"]
+
+[resource]
+script = ExtResource("1_f6wm3")
+question = "Tentukan ekuivalen dari: \"Jika aku rajin, maka aku berhasil.\""
+options = Array[String](["Jika aku tidak berhasil, maka aku tidak rajin.", "Jika aku tidak rajin, maka aku tidak berhasil.", "Jika aku berhasil, maka aku rajin.", "Jika aku rajin, maka aku tidak berhasil."])
+timer = 30
+correct_answer = "A"
+metadata/_custom_type_script = "uid://cfw8rgk40bl27"

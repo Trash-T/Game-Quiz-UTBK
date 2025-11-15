@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="QuizQuestion" load_steps=2 format=3 uid="uid://bhi1416hej0bi"]
+
+[ext_resource type="Script" uid="uid://cfw8rgk40bl27" path="res://resources/questions/quiz_questions.gd" id="1_2rau7"]
+
+[resource]
+script = ExtResource("1_2rau7")
+question = "Tentukan negasi dari: \"Aku makan atau aku minum.\""
+options = Array[String](["Aku makan dan aku minum.", "Aku tidak makan dan aku tidak minum.", "Aku makan dan aku tidak minum.", "Aku tidak makan atau aku minum."])
+timer = 30
+correct_answer = "B"
+metadata/_custom_type_script = "uid://cfw8rgk40bl27"

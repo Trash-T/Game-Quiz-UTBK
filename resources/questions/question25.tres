@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="QuizQuestion" load_steps=2 format=3 uid="uid://buyfpdsdf2c4h"]
+
+[ext_resource type="Script" uid="uid://cfw8rgk40bl27" path="res://resources/questions/quiz_questions.gd" id="1_nxe18"]
+
+[resource]
+script = ExtResource("1_nxe18")
+question = "Tentukan ekuivalen dari: \"Jika aku masuk kelas, maka aku mendengar guru.\""
+options = Array[String](["Jika aku tidak masuk kelas, maka aku mendengar guru.", "Jika aku tidak mendengar guru, maka aku tidak masuk kelas.", "Jika aku masuk kelas, maka aku tidak mendengar guru.", "Jika aku mendengar guru, maka aku tidak masuk kelas."])
+timer = 30
+correct_answer = "B"
+metadata/_custom_type_script = "uid://cfw8rgk40bl27"

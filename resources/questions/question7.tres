@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="QuizQuestion" load_steps=2 format=3 uid="uid://cubp22ffma687"]
+
+[ext_resource type="Script" uid="uid://cfw8rgk40bl27" path="res://resources/questions/quiz_questions.gd" id="1_qthuf"]
+
+[resource]
+script = ExtResource("1_qthuf")
+question = "Semua siswa yang lulus ujian pasti pandai. Sebagian siswa kelas 12 siswa yang pandai. Kesimpulan mana yang benar?"
+options = Array[String](["Semua yang lulus ujian adalah siswa kelas 12.", "Semua siswa yang pandai adalah siswa kelas12.", "Sebagian siswa kelas 12 tidak mengikuti ujian.", "Sebagian siswa kelas 12 tidak lulus ujian."])
+timer = 30
+correct_answer = "D"
+metadata/_custom_type_script = "uid://cfw8rgk40bl27"

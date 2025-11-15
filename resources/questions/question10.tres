@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="QuizQuestion" load_steps=2 format=3 uid="uid://bw6q44opqoahp"]
+
+[ext_resource type="Script" uid="uid://cfw8rgk40bl27" path="res://resources/questions/quiz_questions.gd" id="1_i4er1"]
+
+[resource]
+script = ExtResource("1_i4er1")
+question = "Semua yang teringat, pernah dicatat. Sebagian pengalaman pahit masih teringat. Simpulan yang tepat adalah ...
+"
+options = Array[String](["Semua pengalaman pahit pernah dicatat.", "Sebagian pengalaman pahit pernah dicatat.", "Semua yang pernah dicatat adalah yang teringat.", "Semua yang pernah dicatat adalah pengalaman pahit."])
+timer = 30
+correct_answer = "B"
+metadata/_custom_type_script = "uid://cfw8rgk40bl27"
