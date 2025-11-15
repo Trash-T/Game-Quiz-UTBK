@@ -1,4 +1,4 @@
-This is a game made by Godot for AKSANG ITB Year 2025
+This is a game made using Godot for AKSANG ITB Year 2025
 
 Credits
 - Game Design and Programmer: @arlas._ (on instagram)
