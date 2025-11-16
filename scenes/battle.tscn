@@ -1,4 +1,4 @@
-[gd_scene load_steps=45 format=3 uid="uid://b343l03kmmckh"]
+[gd_scene load_steps=46 format=3 uid="uid://b343l03kmmckh"]
 
 [ext_resource type="Texture2D" uid="uid://drwograd4q03p" path="res://assets/background.png" id="1_dn72j"]
 [ext_resource type="Script" uid="uid://bo8i16s07ppnp" path="res://scripts/battle.gd" id="1_ekamt"]
@@ -19,6 +19,7 @@
 [ext_resource type="Texture2D" uid="uid://b4mvguni3fp55" path="res://assets/ui/down.png" id="15_h4dll"]
 [ext_resource type="Texture2D" uid="uid://dva4ee8iyw2pt" path="res://assets/player1_attack.png" id="18_p0caf"]
 [ext_resource type="Texture2D" uid="uid://cijvuksjj8bg0" path="res://assets/player2_attack.png" id="19_61i1y"]
+[ext_resource type="PackedScene" uid="uid://brry3pdj8are7" path="res://scenes/pause_menu.tscn" id="20_61i1y"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_03edq"]
 bg_color = Color(0.94902, 0.388235, 0.352941, 1)
@@ -36,15 +37,13 @@ border_width_right = 5
 border_width_bottom = 5
 border_color = Color(0.54902, 0.176471, 0.360784, 1)
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_v7i3o"]
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_66ngm"]
-bg_color = Color(0.952941, 0.917647, 0.847059, 1)
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vceff"]
+bg_color = Color(0.537255, 0.152941, 0.345098, 1)
 border_width_left = 5
 border_width_top = 5
 border_width_right = 5
 border_width_bottom = 5
-border_color = Color(0.537255, 0.152941, 0.345098, 1)
+border_color = Color(0.545098, 0.172549, 0.352941, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6ni85"]
 bg_color = Color(0.952941, 0.917647, 0.847059, 1)
@@ -54,13 +53,15 @@ border_width_right = 5
 border_width_bottom = 5
 border_color = Color(0.537255, 0.152941, 0.345098, 1)
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vceff"]
-bg_color = Color(0.537255, 0.152941, 0.345098, 1)
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_66ngm"]
+bg_color = Color(0.952941, 0.917647, 0.847059, 1)
 border_width_left = 5
 border_width_top = 5
 border_width_right = 5
 border_width_bottom = 5
-border_color = Color(0.545098, 0.172549, 0.352941, 1)
+border_color = Color(0.537255, 0.152941, 0.345098, 1)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_v7i3o"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ekamt"]
 bg_color = Color(0, 0, 0, 1)
@@ -686,7 +687,6 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="options" type="Control" parent="player1_menu"]
-layout_mode = 2
 anchors_preset = 0
 offset_left = 50.0
 offset_top = 409.0
@@ -694,7 +694,7 @@ offset_right = 453.0
 offset_bottom = 670.0
 
 [node name="quiz_option" type="TextureRect" parent="player1_menu/options"]
-layout_mode = 2
+layout_mode = 0
 offset_left = 42.0
 offset_top = 30.5
 offset_right = 369.0
@@ -731,15 +731,15 @@ custom_minimum_size = Vector2(0, 75)
 layout_mode = 2
 size_flags_vertical = 4
 mouse_default_cursor_shape = 2
-theme_override_colors/font_hover_color = Color(0.537255, 0.160784, 0.352941, 1)
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_pressed_color = Color(0.541176, 0.168627, 0.360784, 1)
+theme_override_colors/font_hover_color = Color(0.537255, 0.160784, 0.352941, 1)
 theme_override_fonts/font = ExtResource("5_v7i3o")
 theme_override_font_sizes/font_size = 48
-theme_override_styles/focus = SubResource("StyleBoxEmpty_v7i3o")
-theme_override_styles/hover = SubResource("StyleBoxFlat_66ngm")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_6ni85")
 theme_override_styles/normal = SubResource("StyleBoxFlat_vceff")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_6ni85")
+theme_override_styles/hover = SubResource("StyleBoxFlat_66ngm")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_v7i3o")
 text = "Attack"
 
 [node name="player1_heal" type="Button" parent="player1_menu/options/action_option/VBoxContainer"]
@@ -747,15 +747,15 @@ custom_minimum_size = Vector2(0, 75)
 layout_mode = 2
 size_flags_vertical = 4
 mouse_default_cursor_shape = 2
-theme_override_colors/font_hover_color = Color(0.537255, 0.160784, 0.352941, 1)
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_pressed_color = Color(0.541176, 0.168627, 0.360784, 1)
+theme_override_colors/font_hover_color = Color(0.537255, 0.160784, 0.352941, 1)
 theme_override_fonts/font = ExtResource("5_v7i3o")
 theme_override_font_sizes/font_size = 48
-theme_override_styles/focus = SubResource("StyleBoxEmpty_v7i3o")
-theme_override_styles/hover = SubResource("StyleBoxFlat_66ngm")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_6ni85")
 theme_override_styles/normal = SubResource("StyleBoxFlat_vceff")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_6ni85")
+theme_override_styles/hover = SubResource("StyleBoxFlat_66ngm")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_v7i3o")
 text = "Heal"
 
 [node name="cant_move" type="Panel" parent="player1_menu/options"]
@@ -833,7 +833,6 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="options" type="Control" parent="player2_menu"]
-layout_mode = 2
 anchors_preset = 0
 offset_left = 50.0
 offset_top = 409.0
@@ -842,7 +841,7 @@ offset_bottom = 670.0
 
 [node name="quiz_option" type="TextureRect" parent="player2_menu/options"]
 visible = false
-layout_mode = 2
+layout_mode = 0
 offset_left = 42.0
 offset_top = 30.5
 offset_right = 369.0
@@ -878,15 +877,15 @@ custom_minimum_size = Vector2(0, 75)
 layout_mode = 2
 size_flags_vertical = 4
 mouse_default_cursor_shape = 2
-theme_override_colors/font_hover_color = Color(0.537255, 0.160784, 0.352941, 1)
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_pressed_color = Color(0.541176, 0.168627, 0.360784, 1)
+theme_override_colors/font_hover_color = Color(0.537255, 0.160784, 0.352941, 1)
 theme_override_fonts/font = ExtResource("5_v7i3o")
 theme_override_font_sizes/font_size = 48
-theme_override_styles/focus = SubResource("StyleBoxEmpty_v7i3o")
-theme_override_styles/hover = SubResource("StyleBoxFlat_66ngm")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_6ni85")
 theme_override_styles/normal = SubResource("StyleBoxFlat_vceff")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_6ni85")
+theme_override_styles/hover = SubResource("StyleBoxFlat_66ngm")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_v7i3o")
 text = "Attack"
 
 [node name="player2_heal" type="Button" parent="player2_menu/options/action_option/VBoxContainer"]
@@ -894,15 +893,15 @@ custom_minimum_size = Vector2(0, 75)
 layout_mode = 2
 size_flags_vertical = 4
 mouse_default_cursor_shape = 2
-theme_override_colors/font_hover_color = Color(0.537255, 0.160784, 0.352941, 1)
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_pressed_color = Color(0.541176, 0.168627, 0.360784, 1)
+theme_override_colors/font_hover_color = Color(0.537255, 0.160784, 0.352941, 1)
 theme_override_fonts/font = ExtResource("5_v7i3o")
 theme_override_font_sizes/font_size = 48
-theme_override_styles/focus = SubResource("StyleBoxEmpty_v7i3o")
-theme_override_styles/hover = SubResource("StyleBoxFlat_66ngm")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_6ni85")
 theme_override_styles/normal = SubResource("StyleBoxFlat_vceff")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_6ni85")
+theme_override_styles/hover = SubResource("StyleBoxFlat_66ngm")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_v7i3o")
 text = "Heal"
 
 [node name="cant_move" type="Panel" parent="player2_menu/options"]
@@ -1028,7 +1027,7 @@ size_flags_horizontal = 3
 
 [node name="option_a" type="Label" parent="quiz_panel/VBoxContainer/option_a/Panel"]
 custom_minimum_size = Vector2(525, 0)
-layout_mode = 2
+layout_mode = 0
 offset_left = 8.0
 offset_top = 10.0
 offset_right = 539.0
@@ -1058,7 +1057,7 @@ size_flags_horizontal = 3
 
 [node name="option_b" type="Label" parent="quiz_panel/VBoxContainer/option_b/Panel"]
 custom_minimum_size = Vector2(525, 0)
-layout_mode = 2
+layout_mode = 0
 offset_left = 8.0
 offset_top = 10.0
 offset_right = 539.0
@@ -1088,7 +1087,7 @@ size_flags_horizontal = 3
 
 [node name="option_c" type="Label" parent="quiz_panel/VBoxContainer/option_c/Panel"]
 custom_minimum_size = Vector2(525, 0)
-layout_mode = 2
+layout_mode = 0
 offset_left = 8.0
 offset_top = 10.0
 offset_right = 539.0
@@ -1118,7 +1117,7 @@ size_flags_horizontal = 3
 
 [node name="option_d" type="Label" parent="quiz_panel/VBoxContainer/option_d/Panel"]
 custom_minimum_size = Vector2(525, 0)
-layout_mode = 2
+layout_mode = 0
 offset_left = 8.0
 offset_top = 10.0
 offset_right = 539.0
@@ -1147,6 +1146,11 @@ libraries = {
 &"": SubResource("AnimationLibrary_bi5l8")
 }
 autoplay = "idle"
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="pause_menu" parent="CanvasLayer" instance=ExtResource("20_61i1y")]
+visible = false
 
 [connection signal="pressed" from="player1_menu/options/action_option/VBoxContainer/player1_attack" to="." method="_on_player_1_attack_pressed"]
 [connection signal="pressed" from="player1_menu/options/action_option/VBoxContainer/player1_heal" to="." method="_on_player_1_heal_pressed"]

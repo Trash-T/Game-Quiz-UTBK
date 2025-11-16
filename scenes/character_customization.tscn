@@ -1,10 +1,11 @@
-[gd_scene load_steps=12 format=3 uid="uid://btgw4uc1kbt1m"]
+[gd_scene load_steps=13 format=3 uid="uid://btgw4uc1kbt1m"]
 
 [ext_resource type="Script" uid="uid://oepi2ncxgt2e" path="res://scripts/character_customization.gd" id="1_4ymi4"]
 [ext_resource type="Texture2D" uid="uid://drwograd4q03p" path="res://assets/background.png" id="1_8ygxg"]
 [ext_resource type="Texture2D" uid="uid://b82herq7csiaj" path="res://assets/chair_front.png" id="2_4ymi4"]
 [ext_resource type="Texture2D" uid="uid://bn0b0jor2rhss" path="res://assets/cin_bar.png" id="3_20y30"]
 [ext_resource type="FontFile" uid="uid://dyttdoo6nuy0p" path="res://assets/fonts/BoldPixels.ttf" id="4_xegid"]
+[ext_resource type="PackedScene" uid="uid://brry3pdj8are7" path="res://scenes/pause_menu.tscn" id="6_4ymi4"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8ygxg"]
 bg_color = Color(0.952941, 0.917647, 0.847059, 1)
@@ -182,5 +183,10 @@ theme_override_styles/pressed = SubResource("StyleBoxFlat_xegid")
 theme_override_styles/hover = SubResource("StyleBoxFlat_20y30")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_4ymi4")
 text = "Start Battle"
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="pause_menu" parent="CanvasLayer" instance=ExtResource("6_4ymi4")]
+visible = false
 
 [connection signal="pressed" from="start_battle" to="." method="_on_start_battle_pressed"]

@@ -1,0 +1,120 @@
+[gd_scene load_steps=7 format=3 uid="uid://brry3pdj8are7"]
+
+[ext_resource type="Script" uid="uid://c17nf0404v004" path="res://scripts/pause_menu.gd" id="1_myx47"]
+[ext_resource type="FontFile" uid="uid://dyttdoo6nuy0p" path="res://assets/fonts/BoldPixels.ttf" id="1_n87rw"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_myx47"]
+bg_color = Color(0.537255, 0.152941, 0.345098, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.545098, 0.172549, 0.352941, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kukqi"]
+bg_color = Color(0.952941, 0.917647, 0.847059, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.537255, 0.152941, 0.345098, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5d2l8"]
+bg_color = Color(0.952941, 0.917647, 0.847059, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.537255, 0.152941, 0.345098, 1)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_7l7mv"]
+
+[node name="pause_menu" type="Control"]
+process_mode = 3
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_myx47")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -382.5
+offset_top = -348.0
+offset_right = 382.5
+offset_bottom = 348.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 117.0
+offset_top = 93.0
+offset_right = -110.0
+offset_bottom = -105.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 64
+alignment = 1
+
+[node name="resume" type="Button" parent="Panel/VBoxContainer"]
+custom_minimum_size = Vector2(0, 75)
+layout_mode = 2
+size_flags_vertical = 4
+mouse_default_cursor_shape = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(0.541176, 0.168627, 0.360784, 1)
+theme_override_colors/font_hover_color = Color(0.537255, 0.160784, 0.352941, 1)
+theme_override_fonts/font = ExtResource("1_n87rw")
+theme_override_font_sizes/font_size = 64
+theme_override_styles/normal = SubResource("StyleBoxFlat_myx47")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_kukqi")
+theme_override_styles/hover = SubResource("StyleBoxFlat_5d2l8")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_7l7mv")
+text = "RESUME"
+
+[node name="main_menu" type="Button" parent="Panel/VBoxContainer"]
+custom_minimum_size = Vector2(0, 75)
+layout_mode = 2
+size_flags_vertical = 4
+mouse_default_cursor_shape = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(0.541176, 0.168627, 0.360784, 1)
+theme_override_colors/font_hover_color = Color(0.537255, 0.160784, 0.352941, 1)
+theme_override_fonts/font = ExtResource("1_n87rw")
+theme_override_font_sizes/font_size = 64
+theme_override_styles/normal = SubResource("StyleBoxFlat_myx47")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_kukqi")
+theme_override_styles/hover = SubResource("StyleBoxFlat_5d2l8")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_7l7mv")
+text = "MAIN MENU"
+
+[node name="quit" type="Button" parent="Panel/VBoxContainer"]
+custom_minimum_size = Vector2(0, 75)
+layout_mode = 2
+size_flags_vertical = 4
+mouse_default_cursor_shape = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(0.541176, 0.168627, 0.360784, 1)
+theme_override_colors/font_hover_color = Color(0.537255, 0.160784, 0.352941, 1)
+theme_override_fonts/font = ExtResource("1_n87rw")
+theme_override_font_sizes/font_size = 64
+theme_override_styles/normal = SubResource("StyleBoxFlat_myx47")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_kukqi")
+theme_override_styles/hover = SubResource("StyleBoxFlat_5d2l8")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_7l7mv")
+text = "QUIT"
+
+[connection signal="pressed" from="Panel/VBoxContainer/resume" to="." method="_on_resume_pressed"]
+[connection signal="pressed" from="Panel/VBoxContainer/main_menu" to="." method="_on_main_menu_pressed"]
+[connection signal="pressed" from="Panel/VBoxContainer/quit" to="." method="_on_quit_pressed"]
